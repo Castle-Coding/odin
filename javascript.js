@@ -34,20 +34,17 @@ operationButtons.forEach(function (button) {
             operation = this.value;
             historyDisplay.placeholder = `${result} ${this.textContent}`;
             lastButtonPressed = this.value;
-            console.log(`First Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         } else if(a != null && result != null) {
             result = operate(operation, parseFloat(result), parseFloat(inputDisplay.value));
             operation = this.value;
             historyDisplay.placeholder = `${result} ${this.textContent}`;
             lastButtonPressed = this.value;
-            console.log(`Second Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         } else {
             operation = this.value;
             a = inputDisplay.value; 
             lastButtonPressed = "";
             historyDisplay.placeholder = `${a} ${this.textContent}`;
             lastButtonPressed = this.value;
-            console.log(`Third Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         }
     })
 })
