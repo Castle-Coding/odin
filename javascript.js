@@ -10,7 +10,6 @@ let operation = "";
 let a = null;
 let result = null;
 let lastButtonPressed = "";
-let lastOperationPerformed = "";
 
 inputButtons.forEach(function (button) {
     button.value = button.textContent;
@@ -48,7 +47,6 @@ operationButtons.forEach(function (button) {
             lastButtonPressed = "";
             historyDisplay.placeholder = `${a} ${this.textContent}`;
             lastButtonPressed = this.value;
-            lastOperationPerformed = this.value;
             console.log(`Third Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         }
     })
