@@ -1,0 +1,131 @@
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- Body Start --- */
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* --- Main View Start --- */
+
+.main-view {
+    flex-grow: 1;
+    margin-top: 10%;
+}
+
+/* --- Calculator Start --- */
+
+.calculator {
+    width: 350px;
+    height: 500px;
+    background-color: grey;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    border: solid black;
+}
+
+/* --- Display Start --- */
+
+.display {
+    background-color: lightgray;
+    width: 86%;
+    height: 120px;
+    border: solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding-right: 2.5%;
+    font-size: 20px;
+}
+
+input {
+    line-height: 35px;
+    text-align: right;
+    background-color: lightgray;
+    font-size: 40px;
+    border: none;
+}
+
+/* --- Display End --- */
+/* --- Input View Start --- */
+
+.input-view {
+    width: 325px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Input Buttons Start --- */
+/* --- Big Buttons Start --- */
+
+.big-buttons {
+    flex-grow: 1;
+    padding: 2.5%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2.5%
+}
+
+.big-buttons button {
+    width: 47%;
+    padding: 0 1%;
+    border-radius: 8px;
+    border: solid black;
+}
+
+/* --- Big Buttons End --- */
+/* --- Smaller Input Buttons Start --- */
+
+.input-buttons {
+    flex-grow: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 2.5%;
+}
+
+.input-buttons button {
+    width: 20%;
+    height: auto;
+    border: solid black;
+    border-radius: 8px;
+    flex-basis: calc(50% - 90px);
+
+
+}
+
+/* --- Smaller Input Buttons Start --- */
+/* --- Input Buttons End --- */
+/* --- Input End --- */
+/* --- Calculator End --- */
+/* --- Main View End --- */
+/* --- Footer Start --- */
+
+.footer {
+    flex: 0 1;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+/* --- Footer End --- */
+/* --- Body End --- */
