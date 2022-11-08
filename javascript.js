@@ -30,13 +30,13 @@ inputButtons.forEach(function (button) {
 operationButtons.forEach(function (button) {
     button.addEventListener('click', function () {
         if (a != null && result == null) {
-            result = operate(operation, parseInt(a), parseInt(inputDisplay.value));
+            result = operate(operation, parseFloat(a), parseFloat(inputDisplay.value));
             operation = this.value;
             historyDisplay.placeholder = `${result} ${this.textContent}`;
             lastButtonPressed = this.value;
             console.log(`First Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         } else if(a != null && result != null) {
-            result = operate(operation, parseInt(result), parseInt(inputDisplay.value));
+            result = operate(operation, parseFloat(result), parseFloat(inputDisplay.value));
             operation = this.value;
             historyDisplay.placeholder = `${result} ${this.textContent}`;
             lastButtonPressed = this.value;
@@ -64,7 +64,7 @@ backSpaceButton.addEventListener('click', function () {
     if (inputDisplay.value != "" && inputDisplay.value.length > 1) {
         let a = Array.from(inputDisplay.value)
         a.pop();
-        inputDisplay.value = parseInt(a.join(""));
+        inputDisplay.value = parseFloat(a.join(""));
     } else {
         inputDisplay.value = "";
     }
