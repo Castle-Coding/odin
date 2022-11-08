@@ -92,7 +92,7 @@ input {
 /* --- Big Buttons End --- */
 /* --- Smaller Input Buttons Start --- */
 
-.input-buttons {
+.smaller-buttons {
     flex-grow: 4;
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +102,7 @@ input {
     margin-bottom: 2.5%;
 }
 
-.input-buttons button {
+.smaller-buttons button {
     width: 20%;
     height: auto;
     border: solid black;
