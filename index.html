@@ -14,32 +14,32 @@
     <div class="main-view">
         <div class="calculator">
             <div class="display">
-                <div class="history"><input type="text" size="11" value="" maxlength="24" readonly disabled></div>
-                <div class="working-input"><input type="text" size="11" value="0" maxlength="24" readonly disabled>
+                <div class="history"><input id="history-text-box" type="text" size="11" value="" maxlength="24" readonly disabled></div>
+                <div class="working-input"><input id="input-text-box" type="text" size="11" value="" placeholder="0" maxlength="24" readonly disabled>
                 </div>
             </div>
             <div class="input-view">
                 <div class="big-buttons">
-                    <button class="clear">CLEAR</button>
-                    <button class="delete">&#8594;</button>
+                    <button id="clear-button">CLEAR</button>
+                    <button id="backspace-button">&#8594;</button>
                 </div>
                 <div class="smaller-buttons">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>&#247;</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>x</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>-</button>
+                    <button class="input-button">7</button>
+                    <button class="input-button">8</button>
+                    <button class="input-button">9</button>
+                    <button class="operation-button" value="divison">&#247;</button>
+                    <button class="input-button">4</button>
+                    <button class="input-button">5</button>
+                    <button class="input-button">6</button>
+                    <button class="operation-button" value="multiplication">x</button>
+                    <button class="input-button">1</button>
+                    <button class="input-button">2</button>
+                    <button class="input-button">3</button>
+                    <button class="operation-button" value="subtraction">-</button>
                     <button>.</button>
-                    <button>0</button>
-                    <button>=</button>
-                    <button>+</button>
+                    <button class="input-button">0</button>
+                    <button class="operate-button">=</button>
+                    <button class="operation-button" value="addition">+</button>
                 </div>
             </div>
         </div>
