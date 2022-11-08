@@ -8,7 +8,9 @@ const backSpaceButton = document.getElementById('backspace-button')
 
 let operation = "";
 let a = null;
+let result = null;
 let lastButtonPressed = "";
+let lastOperationPerformed = "";
 
 inputButtons.forEach(function (button) {
     button.value = button.textContent;
@@ -28,16 +30,26 @@ inputButtons.forEach(function (button) {
 
 operationButtons.forEach(function (button) {
     button.addEventListener('click', function () {
-        if (a != null) {
-            let result = operate(operation, parseInt(a), parseInt(inputDisplay.value));
+        if (a != null && result == null) {
+            result = operate(operation, parseInt(a), parseInt(inputDisplay.value));
+            operation = this.value;
             historyDisplay.placeholder = `${result} ${this.textContent}`;
             lastButtonPressed = this.value;
-            a = result;
+            console.log(`First Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
+        } else if(a != null && result != null) {
+            result = operate(operation, parseInt(result), parseInt(inputDisplay.value));
+            operation = this.value;
+            historyDisplay.placeholder = `${result} ${this.textContent}`;
+            lastButtonPressed = this.value;
+            console.log(`Second Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         } else {
             operation = this.value;
-            a = inputDisplay.value; lastButtonPressed = "";
+            a = inputDisplay.value; 
+            lastButtonPressed = "";
             historyDisplay.placeholder = `${a} ${this.textContent}`;
             lastButtonPressed = this.value;
+            lastOperationPerformed = this.value;
+            console.log(`Third Condition: Result = ${result}, Op = ${operation}, a = ${a}, LastB = ${lastButtonPressed} `);
         }
     })
 })
@@ -46,6 +58,8 @@ clearButton.addEventListener('click', function () {
     inputDisplay.value = "";
     operation = "";
     historyDisplay.placeholder = "";
+    result = null;
+    a = null;
 })
 
 backSpaceButton.addEventListener('click', function () {
